@@ -4,10 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootLearningApplication {
-
+public class OAuthResourceMain {
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootLearningApplication.class, args);
+        SpringApplication.run(OAuthResourceMain.class, args);
     }
-
 }
