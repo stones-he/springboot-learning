@@ -15,6 +15,7 @@
     <description>springboot-learning</description>
     <modules>
         <module>oauth</module>
+        <module>prometheus-demo</module>
     </modules>
     <properties>
         <revision>0.0.1</revision>
