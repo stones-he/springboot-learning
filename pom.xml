@@ -16,6 +16,7 @@
     <modules>
         <module>oauth</module>
         <module>prometheus-demo</module>
+        <module>prometheus-service-discover</module>
     </modules>
     <properties>
         <revision>0.0.1</revision>
