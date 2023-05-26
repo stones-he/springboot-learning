@@ -11,4 +11,5 @@ scrape_configs:
     metrics_path: "/actuator/prometheus"
     http_sd_configs:
       - url: http://10.60.5.34:9009/prom/servers
+        refresh_interval: 1m
 ```
