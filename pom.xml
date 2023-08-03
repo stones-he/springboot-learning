@@ -17,6 +17,9 @@
         <module>oauth</module>
         <module>prometheus-demo</module>
         <module>prometheus-service-discover</module>
+        <module>gracefulshutdown</module>
+        <module>mybatis</module>
+        <module>satoken</module>
     </modules>
     <properties>
         <revision>0.0.1</revision>
