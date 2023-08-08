@@ -20,6 +20,7 @@
         <module>gracefulshutdown</module>
         <module>mybatis</module>
         <module>satoken</module>
+        <module>forest-api</module>
     </modules>
     <properties>
         <revision>0.0.1</revision>
