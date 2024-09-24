@@ -6,11 +6,19 @@
     <parent>
         <groupId>io.java.learning</groupId>
         <artifactId>springboot-learning</artifactId>
-        <version>${revision}</version>
+        <version>0.0.1</version>
     </parent>
 
-    <artifactId>satoken</artifactId>
+    <artifactId>satoken-client-app</artifactId>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
+        <!-- Sa-Token 权限认证, 在线文档：https://sa-token.cc -->
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-spring-boot3-starter</artifactId>
@@ -22,8 +30,7 @@
             <artifactId>sa-token-sso</artifactId>
             <version>1.38.0</version>
         </dependency>
-
-        <!-- Sa-Token 整合 Redis (使用 jackson 序列化方式) -->
+        <!-- Sa-Token 整合redis (使用jackson序列化方式) -->
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-redis-jackson</artifactId>
@@ -33,16 +40,19 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
         </dependency>
-        <!-- 视图引擎（在前后端不分离模式下提供视图支持） -->
+        <!-- Sa-Token插件：权限缓存与业务缓存分离 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-alone-redis</artifactId>
+            <version>1.38.0</version>
         </dependency>
-        <!-- Http请求工具（在模式三的单点注销功能下用到，如不需要可以注释掉） -->
         <dependency>
             <groupId>com.dtflys.forest</groupId>
-            <artifactId>forest-spring-boot-starter</artifactId>
-            <version>1.5.26</version>
+            <artifactId>forest-core</artifactId>
+            <version>1.5.32</version>
+            <scope>compile</scope>
         </dependency>
+
     </dependencies>
+
 </project>

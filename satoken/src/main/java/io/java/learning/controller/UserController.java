@@ -1,5 +1,6 @@
 package io.java.learning.controller;
 
+import cn.dev33.satoken.SaManager;
 import cn.dev33.satoken.stp.StpUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +24,12 @@ public class UserController {
     @RequestMapping("isLogin")
     public String isLogin() {
         return "当前会话是否登录：" + StpUtil.isLogin();
+    }
+
+    @RequestMapping("redis")
+    public String testRedis() {
+        SaManager.getSaTokenDao().set("name", "value", 100000);
+        return "OK";
     }
 
 }

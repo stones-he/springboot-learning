@@ -22,6 +22,7 @@ spring:
             client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/{registrationId}"
+            client-authentication-method: "client_secret_basic"
             scope: openid
             client-name: messaging-client-oidc
           messaging-client-authorization-code:
@@ -29,6 +30,7 @@ spring:
             client-id: messaging-client
             client-secret: secret
             authorization-grant-type: authorization_code
+            client-authentication-method: "client_secret_basic"
             redirect-uri: "http://127.0.0.1:8080/authorized"
             scope: message.read,message.write
             client-name: messaging-client-authorization-code
@@ -37,10 +39,17 @@ spring:
             client-id: messaging-client
             client-secret: secret
             authorization-grant-type: client_credentials
+            client-authentication-method: "client_secret_basic"
             scope: message.read,message.write
             client-name: messaging-client-client-credentials
         provider:
           spring:
+            authorization-uri: "http://localhost:9000/oauth2/authorize"
+            token-uri: "http://localhost:9000/oauth2/token"
+            user-info-uri: "http://localhost:9000/userinfo"
+            user-info-authentication-method: "header"
+            jwk-set-uri: "http://localhost:9000/oauth2/jwks"
+            user-name-attribute: "name"
             issuer-uri: http://localhost:9000
 
 messages:
