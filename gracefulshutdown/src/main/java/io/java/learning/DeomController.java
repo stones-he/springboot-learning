@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class DeomController {
 
     @PostMapping("/mailSendStatusCallback")
-    public String getMessage( @RequestParam("msg") String statusMsg,String send_time){
-        System.out.println(send_time + ":"+statusMsg);
+    public String getMessage(@RequestParam("msg") String statusMsg, String send_time, @RequestParam("james_server") String jamesServer) {
+        System.out.println(send_time + ":" + statusMsg + ":" + jamesServer);
         return "OK";
     }
 }

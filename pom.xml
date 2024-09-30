@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version>
+        <version>3.3.4</version>
     </parent>
     <groupId>io.java.learning</groupId>
     <artifactId>springboot-learning</artifactId>
@@ -14,16 +14,17 @@
     <name>springboot-learning</name>
     <description>springboot-learning</description>
     <modules>
-        <module>oauth</module>
-        <module>prometheus-demo</module>
-        <module>prometheus-service-discover</module>
-        <module>gracefulshutdown</module>
-        <module>mybatis</module>
-        <module>satoken</module>
-        <module>forest-api</module>
-        <module>cas</module>
-        <module>cas-server</module>
-        <module>satoken-client-app</module>
+<!--        <module>oauth</module>-->
+<!--        <module>prometheus-demo</module>-->
+<!--        <module>prometheus-service-discover</module>-->
+<!--        <module>gracefulshutdown</module>-->
+<!--        <module>mybatis</module>-->
+<!--        <module>satoken</module>-->
+<!--        <module>forest-api</module>-->
+<!--        <module>cas</module>-->
+<!--        <module>cas-server</module>-->
+<!--        <module>satoken-client-app</module>-->
+        <module>Reactor</module>
     </modules>
     <properties>
         <revision>0.0.1</revision>
